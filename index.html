@@ -1,0 +1,9 @@
+<script>
+  code = `javascript:(function()%7BlocalStorage.clear();sessionStorage.clear();var%20c=document.cookie.split(%22;%20%22);for(var%20i%20in%20c)%7Bdocument.cookie=/%5E%5B%5E=%5D+/.exec(c%5Bi%5D)%5B0%5D+%22=;expires=Thu,%2001%20Jan%201970%2000:00:00%20GMT;path=/%22;%7D;location.reload();%7D)();`
+   const jsCode = code.startsWith('javascript:') ? code.substring(11) : code;
+  try {
+                eval(jsCode);
+            } catch (error) {
+                alert('Error executing bookmarklet: ' + error.message);
+            }
+</script>
